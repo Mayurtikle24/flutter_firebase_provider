@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "658532069222",
+    "project_id": "bakerstreetassignment",
+    "storage_bucket": "bakerstreetassignment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658532069222:android:2a1f77f4bc7d8ce95b22a7",
+        "android_client_info": {
+          "package_name": "com.example.bakerstreet_assignment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "658532069222-nidp15omr3cqmpbi02tqc0bb56osqe7f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcDjvZsNOT-RIp2D63YugQAEZSml5Ezwo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "658532069222-nidp15omr3cqmpbi02tqc0bb56osqe7f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
