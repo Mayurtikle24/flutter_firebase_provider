@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import '../provider/phoneAuthProvider.dart';
+import 'otpScreen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -127,6 +128,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     GestureDetector(
                       onTap: () {
                         if (_formKey.currentState!.validate()) {
+                          Navigator.of(context)
+                              .push(MaterialPageRoute(builder: (contex) {
+                            return OtpScreen(
+                                phoneNumber: _phoneTextController.text.trim());
+                          }));
                           phoneAuthProvider.verifyPhoneNumber(
                               "+91${_phoneTextController.text.trim()}",
                               context);

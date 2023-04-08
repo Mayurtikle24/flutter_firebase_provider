@@ -2,6 +2,7 @@ import 'package:bakerstreet_assignment/pages/homeScreen.dart';
 import 'package:bakerstreet_assignment/pages/otpScreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class PhoneProvider extends ChangeNotifier {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
@@ -16,9 +17,6 @@ class PhoneProvider extends ChangeNotifier {
         verificationFailed: (FirebaseAuthException e) {},
         codeSent: (String verificationId, int? resendToken) {
           _verificationId = verificationId;
-          Navigator.of(context).push(MaterialPageRoute(builder: (contex) {
-            return OtpScreen(phoneNumber: phoneNumber);
-          }));
         },
         codeAutoRetrievalTimeout: (String verificationId) {},
       );
@@ -43,7 +41,7 @@ class PhoneProvider extends ChangeNotifier {
         return const HomePage();
       }));
     } catch (e) {
-      print(e);
+      Fluttertoast.showToast(msg: "Enter Correct Otp Pin");
     }
   }
 

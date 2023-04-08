@@ -27,7 +27,6 @@ class _HomePageState extends State<HomePage> {
   int selectedAge = 0;
   String _name = "";
   String _email = "";
-  final String _selectedGender = '';
   DateTime _selectedDate = DateTime.now();
 
   var futureData;
@@ -309,7 +308,7 @@ class _HomePageState extends State<HomePage> {
                                       name: _name.trim(),
                                       age: selectedAge,
                                       dob: _selectedDate.toString(),
-                                      gender: _selectedGender,
+                                      gender: _genderProvider.selectedGender,
                                       email: _email.trim(),
                                     );
                                     _formProvider.addUserDetails(user);
